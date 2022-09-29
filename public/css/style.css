@@ -1,7 +1,22 @@
 * {
-    background-color: cornsilk;
+	background-color: cornsilk;
 }
 
-h1 {
-    color: darkslateblue;
+header {
+	text-align: center;
+}
+
+.button-hover-white:hover {
+	color: #000;
+	background-color: #fff;
+}
+
+.button-hover-white {
+    display: block;
+	text-align: center;
+    margin: auto;
+    line-height: 60px;
+    width: 80%;
+    height: 60px;
+    text-decoration: none;
 }
