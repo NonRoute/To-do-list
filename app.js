@@ -1,14 +1,13 @@
 const express = require('express')
-const router = express.Router()
+const path = require("path")
+const router = require('./routes/router')
 const ejs = require('ejs')
 const app = express()
 
 app.set('view engine', 'ejs')
 
 app.use(router)
-app.use('/', (req, res) => {
-    res.render("index")
-})
+app.use(express.static(path.join(__dirname, "public")))
 
 app.listen(3000, () => {
     console.log('start server at port 3000');
