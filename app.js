@@ -1,8 +1,13 @@
 const express = require('express')
+const router = express.Router()
+const ejs = require('ejs')
 const app = express()
 
-app.use((req, res) => {
-    res.send("Hello Express.js")
+app.set('view engine', 'ejs')
+
+app.use(router)
+app.use('/', (req, res) => {
+    res.render("index")
 })
 
 app.listen(3000, () => {
