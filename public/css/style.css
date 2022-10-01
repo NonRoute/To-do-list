@@ -72,3 +72,24 @@ li a:hover {
     border: 3px solid #fff;
     border-radius: 10px;
 }
+
+.todo {
+    background-color: #fff;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.todo > h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.todo > p {
+    margin-top: 10px;
+}
+
+.right {
+    text-align: right;
+}
