@@ -12,4 +12,9 @@ router.get("/view", (req, res) => {
 router.get("/edit", (req, res) => {
 	res.render("edit")
 })
+
+router.get("/add", (req, res) => {
+	res.render("add")
+})
+
 module.exports = router

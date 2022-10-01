@@ -89,6 +89,12 @@ li a:hover {
     margin-top: 10px;
     text-align: right;
     margin-right: 20px;
+}
+
+.input-date-time {
+    margin-top: 10px;
+    text-align: right;
+    margin-right: 20px;
     float: right;
 }
 
