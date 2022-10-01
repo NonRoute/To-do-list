@@ -81,15 +81,63 @@ li a:hover {
     padding: 15px;
 }
 
-.todo > h2 {
-    text-align: center;
-    font-size: 30px;
-}
-
 .todo > p {
     margin-top: 10px;
 }
 
-.right {
+.date-time {
+    margin-top: 10px;
     text-align: right;
+    margin-right: 20px;
+    float: right;
+}
+
+.edit-tab {
+    padding: 0 20px;
+    background-color: #039FDA;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-tab > h2 {
+    color:#fff;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.edit-tab > button {
+    font-weight: 700;
+    background-color: white;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.edit-tab > button:hover {
+    background-color: rgba(255, 255, 255, 0.779);
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+}
+
+textarea {
+    font-family: "Inter", sans-serif;
+    margin-top: 10px;
+    resize: vertical;
+    font-size: 14px;
+    height: 100px;
+    width: 99%;
+}
+
+.title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 30px;
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>View To-Do List</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header><%- include('navbar') %></header>
+		<main>
+			<div class="todo">
+				<div class="edit-tab">
+					<input type="text" class="title" value="Title" />
+					<button>Edit</button>
+				</div>
+				<input
+					type="datetime-local"
+					class="date-time"
+					value="2022-11-12T19:30"
+				/>
+				<textarea name="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt itaque exercitationem odit nisi ad ab modi placeat consequuntur nobis optio sunt explicabo tempora animi, esse magni earum doloribus, necessitatibus facere?Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, iusto eius. Iusto odit, distinctio neque, voluptates sapiente commodi suscipit assumenda magnam, nam iure incidunt? Nobis exercitationem necessitatibus ducimus qui! Illo!
+				</textarea
+				>
+			</div>
+		</main>
+	</body>
+</html>
