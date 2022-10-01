@@ -17,12 +17,14 @@
 		<header><%- include('navbar') %></header>
 		<main>
 			<div class="todo">
-				<div class="edit-tab">
-					<input type="text" class="title" />
-					<button>Add</button>
-				</div>
-				<input type="datetime-local" class="input-date-time" />
-				<textarea name="text"> </textarea>
+				<form mothod="post" action="/insert">
+					<div class="edit-tab">
+						<input type="text" name="title" class="title"/>
+						<button formmethod="post">Add</button>
+					</div>
+					<input type="datetime-local" name="date-time" class="input-date-time" />
+					<textarea name="text"> </textarea>
+				</form>
 			</div>
 		</main>
 	</body>

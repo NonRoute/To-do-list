@@ -17,4 +17,9 @@ router.get("/add", (req, res) => {
 	res.render("add")
 })
 
+router.post("/insert", (req, res) => {
+	console.log(JSON.stringify(req.body))
+	res.redirect('/add')
+})
+
 module.exports = router
