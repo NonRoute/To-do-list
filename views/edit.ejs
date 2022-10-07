@@ -16,20 +16,24 @@
 	<body>
 		<header><%- include('navbar') %></header>
 		<main>
-			<div class="todo">
-				<div class="edit-tab">
-					<input type="text" class="title" value="Title" />
-					<button>Edit</button>
+			<% Object.values(todo).forEach(function(item){%>
+				<div class="todo">
+					<form mothod="post" action="/update">
+						<div class="edit-tab">
+							<input type="hidden" value="<%= item._id %>" name="update_id">
+							<input type="text" class="title" name="title" value="<%= item.title %>" />
+							<button formmethod="post">Edit</button>
+						</div>
+						<input
+							type="datetime-local"
+							class="input-date-time"
+							name="datetime"
+							value="<%= item.datetime %>"
+						/>
+						<textarea name="text"><%= item.text %></textarea>
+					</form>
 				</div>
-				<input
-					type="datetime-local"
-					class="input-date-time"
-					value="2022-11-12T19:30"
-				/>
-				<textarea name="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt itaque exercitationem odit nisi ad ab modi placeat consequuntur nobis optio sunt explicabo tempora animi, esse magni earum doloribus, necessitatibus facere?Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, iusto eius. Iusto odit, distinctio neque, voluptates sapiente commodi suscipit assumenda magnam, nam iure incidunt? Nobis exercitationem necessitatibus ducimus qui! Illo!
-				</textarea
-				>
-			</div>
+			<% }) %>
 		</main>
 	</body>
 </html>

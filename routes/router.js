@@ -13,7 +13,9 @@ router.get("/view", (req, res) => {
 })
 
 router.get("/edit", (req, res) => {
-	res.render("edit")
+	Todo.find().exec((err,doc)=>{
+		res.render("edit", {todo: doc})
+	})
 })
 
 router.get("/add", (req, res) => {
@@ -33,4 +35,17 @@ router.post("/insert", (req, res) => {
 	})
 })
 
+router.post("/update", (req, res) => {
+	const update_id = req.body.update_id
+	console.log(update_id)
+	let data = {
+		title:req.body.title,
+		datetime:req.body.datetime,
+		text:req.body.text
+	}
+	console.log(data);
+	Todo.findByIdAndUpdate(update_id, data, {useFindAndModify:false}).exec(err=>{
+		res.redirect('/edit')
+	})
+})
 module.exports = router
