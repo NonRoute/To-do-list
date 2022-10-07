@@ -19,8 +19,12 @@
 			<div class="todo">
 				<form mothod="post" action="/insert">
 					<div class="edit-tab">
-						<input type="text" name="title" class="title"/>
-						<button formmethod="post">Add</button>
+						<div class="edit-title">
+							<input type="text" name="title" class="title"/>
+						</div>
+						<div class="edit-button">
+							<button formmethod="post">Add</button>
+						</div>
 					</div>
 					<input type="datetime-local" name="datetime" class="input-date-time" />
 					<textarea name="text"> </textarea>

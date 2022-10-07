@@ -115,7 +115,7 @@ li a:hover {
     font-size: 30px;
 }
 
-.edit-tab > button {
+.edit-tab > .edit-button > button {
     font-weight: 700;
     background-color: white;
     height: 30px;
@@ -124,11 +124,21 @@ li a:hover {
     border: 0;
 }
 
-.edit-tab > button:hover {
+.edit-tab > .edit-button > button:hover {
     background-color: rgba(255, 255, 255, 0.779);
     height: 30px;
     border-radius: 5px;
     border: 0;
+}
+
+.edit-tab > .edit-button > .del-btn {
+    background-color: rgb(211, 72, 72);
+    color: white;
+}
+
+.edit-tab > .edit-button > .del-btn:hover {
+    background-color: rgb(207, 107, 107);
+    color: white;
 }
 
 textarea {
@@ -147,3 +157,4 @@ textarea {
     line-height: 30px;
     font-size: 30px;
 }
+

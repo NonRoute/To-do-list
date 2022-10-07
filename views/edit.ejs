@@ -18,11 +18,16 @@
 		<main>
 			<% Object.values(todo).forEach(function(item){%>
 				<div class="todo">
-					<form mothod="post" action="/update">
+					<form mothod="post">
 						<div class="edit-tab">
-							<input type="hidden" value="<%= item._id %>" name="update_id">
-							<input type="text" class="title" name="title" value="<%= item.title %>" />
-							<button formmethod="post">Edit</button>
+							<div class="edit-title">
+								<input type="hidden" value="<%= item._id %>" name="update_id">
+								<input type="text" class="title" name="title" value="<%= item.title %>" />
+							</div>
+							<div class="edit-button">
+								<button type="submit" formaction="/update" formmethod="post" onclick="return alert('Edit success!')">Edit</button>
+								<button type="submit" formaction="/delete" formmethod="post" class="del-btn" onclick="return confirm('Do you want to delete?')">Delete</button>
+							</div>
 						</div>
 						<input
 							type="datetime-local"

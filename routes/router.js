@@ -37,14 +37,20 @@ router.post("/insert", (req, res) => {
 
 router.post("/update", (req, res) => {
 	const update_id = req.body.update_id
-	console.log(update_id)
 	let data = {
 		title:req.body.title,
 		datetime:req.body.datetime,
 		text:req.body.text
 	}
-	console.log(data);
 	Todo.findByIdAndUpdate(update_id, data, {useFindAndModify:false}).exec(err=>{
+		res.redirect('/edit')
+	})
+})
+
+router.post("/delete", (req, res) => {
+	const delete_id = req.body.update_id
+	Todo.findByIdAndDelete(delete_id,{useFindAndModify:false}).exec(err=>{
+		if(err) console.log(err)
 		res.redirect('/edit')
 	})
 })

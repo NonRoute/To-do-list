@@ -23,7 +23,7 @@
 					<div class="edit-tab">
 						<h2><%= item.title %></h2>
 					</div>
-					<p class="date-time"><em><%= item.datetime %></em></p>
+					<p class="date-time"><em><%= item.datetime.replace('T', ' ')%></em></p>
 					<p>
 						<%= item.text %>
 					</p>
