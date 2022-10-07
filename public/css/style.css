@@ -60,6 +60,7 @@ li a:hover {
 
 .button-hover-white {
     font-size: 30px;
+    font-weight: bold;
     color: #fff;
     background-color: #0466BF;
 	display: block;
@@ -156,5 +157,12 @@ textarea {
     display: inline-block;
     line-height: 30px;
     font-size: 30px;
+}
+
+.todo-empty {
+    font-weight: 700;
+    color: #434343;
+    margin-top: 20px;
+    text-align: center;
 }
 

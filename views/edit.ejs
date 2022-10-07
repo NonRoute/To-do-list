@@ -39,6 +39,12 @@
 					</form>
 				</div>
 			<% }) %>
+
+			<% if(!Object.values(todo).length) {%>
+				<p class="todo-empty">
+					To-Do List is empty
+				</p>
+			<% } %>
 		</main>
 	</body>
 </html>

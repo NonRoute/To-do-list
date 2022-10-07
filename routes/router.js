@@ -23,7 +23,6 @@ router.get("/add", (req, res) => {
 })
 
 router.post("/insert", (req, res) => {
-	console.log(JSON.stringify(req.body))
 	let data = new Todo({
 		title:req.body.title,
 		datetime:req.body.datetime,
