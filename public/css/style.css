@@ -166,3 +166,10 @@ textarea {
     text-align: center;
 }
 
+.num-todo {
+    font-weight: 700;
+    color: #0466BF;
+    margin-top: 20px;
+    text-align: center;
+}
+

@@ -18,6 +18,7 @@
 			<%- include('navbar') %>
 		</header>
 		<main>
+			<h2 class="num-todo">Number of To-Do List : <%= Object.values(todo).length %></h2>
 			<% Object.values(todo).forEach(function(item){%>
 				<div class="todo">
 					<div class="edit-tab">
