@@ -1,5 +1,6 @@
 const express = require("express")
 const router = express.Router()
+const Todo = require('../models/todo')
 
 router.get("/", (req, res) => {
 	res.render("index")
@@ -19,7 +20,15 @@ router.get("/add", (req, res) => {
 
 router.post("/insert", (req, res) => {
 	console.log(JSON.stringify(req.body))
-	res.redirect('/add')
+	let data = new Todo({
+		title:req.body.title,
+		datetime:req.body.datetime,
+		text:req.body.text
+	})
+	Todo.saveTodo(data, (err)=> {
+		if (err) console.log(err)
+		res.redirect('/add')
+	})
 })
 
 module.exports = router
