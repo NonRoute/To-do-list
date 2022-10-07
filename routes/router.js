@@ -7,13 +7,13 @@ router.get("/", (req, res) => {
 })
 
 router.get("/view", (req, res) => {
-	Todo.find().exec((err,doc)=>{
+	Todo.find().sort( { datetime : 1 } ).exec((err,doc)=>{
 		res.render("view", {todo: doc})
 	})
 })
 
 router.get("/edit", (req, res) => {
-	Todo.find().exec((err,doc)=>{
+	Todo.find().sort( { datetime : 1 } ).exec((err,doc)=>{
 		res.render("edit", {todo: doc})
 	})
 })
