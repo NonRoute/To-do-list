@@ -18,15 +18,17 @@
 			<%- include('navbar') %>
 		</header>
 		<main>
-            <div class="todo">
-				<div class="edit-tab">
-					<h2>Title</h2>
+			<% Object.values(todo).forEach(function(item){%>
+				<div class="todo">
+					<div class="edit-tab">
+						<h2><%= item.title %></h2>
+					</div>
+					<p class="date-time"><em><%= item.datetime %></em></p>
+					<p>
+						<%= item.text %>
+					</p>
 				</div>
-				<p class="date-time"><em>Date Time</em></p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt itaque exercitationem odit nisi ad ab modi placeat consequuntur nobis optio sunt explicabo tempora animi, esse magni earum doloribus, necessitatibus facere?Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, iusto eius. Iusto odit, distinctio neque, voluptates sapiente commodi suscipit assumenda magnam, nam iure incidunt? Nobis exercitationem necessitatibus ducimus qui! Illo!
-				</p>
-			</div>
+			<% }) %>
 		</main>
 	</body>
 </html>

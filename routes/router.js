@@ -7,7 +7,9 @@ router.get("/", (req, res) => {
 })
 
 router.get("/view", (req, res) => {
-	res.render("view")
+	Todo.find().exec((err,doc)=>{
+		res.render("view", {todo: doc})
+	})
 })
 
 router.get("/edit", (req, res) => {
