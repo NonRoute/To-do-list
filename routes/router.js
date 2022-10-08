@@ -13,9 +13,13 @@ router.get("/view", (req, res) => {
 })
 
 router.get("/edit", (req, res) => {
-	Todo.find().sort( { datetime : 1 } ).exec((err,doc)=>{
-		res.render("edit", {todo: doc})
-	})
+	if (req.session.login) {
+		Todo.find().sort( { datetime : 1 } ).exec((err,doc)=>{
+			res.render("edit", {todo: doc})
+		})
+	} else {
+		res.render('login', {success: ""})
+	}
 })
 
 router.get("/add", (req, res) => {
@@ -24,6 +28,12 @@ router.get("/add", (req, res) => {
 
 router.get("/login", (req, res) => {
 	res.render("login", {success: ""})
+})
+
+router.get("/logout", (req, res) => {
+	req.session.destroy((err)=>{
+		res.redirect('/')
+	})
 })
 
 router.get('/:id',(req,res)=>{
@@ -68,7 +78,7 @@ router.post("/delete", (req, res) => {
 router.post('/signin',(req,res)=>{
 	const username = req.body.username
 	const password = req.body.password
-	const timeExpire = 30000 
+	const timeExpire = 30 * 60 * 1000 //30 min
 
 	if (username === "admin" && password === "pass") {
 		req.session.username = username
