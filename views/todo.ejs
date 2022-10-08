@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Add To-Do List</title>
+		<title>To-Do List</title>
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,22 +15,20 @@
 	</head>
 	<body>
 		<%- include('navbar') %>
-		
+
 		<main>
-			<div class="todo">
-				<form mothod="post" action="/insert">
-					<div class="edit-tab">
-						<div class="edit-title">
-							<input type="text" name="title" class="title"/>
-						</div>
-						<div class="edit-button">
-							<button formmethod="post">Add</button>
-						</div>
-					</div>
-					<input type="datetime-local" name="datetime" class="input-date-time" />
-					<textarea name="text"> </textarea>
-				</form>
-			</div>
+            <div class="go-back">
+                <a href="/view"><button type="submit" class="go-back-btn">Go Back</button></a>
+            </div>
+            <div class="todo">
+                <div class="edit-tab">
+                    <h2><%= item.title %></h2>
+                </div>
+                <p class="date-time"><em><%= item.datetime.replace('T', ' ')%></em></p>
+                <p>
+                    <%= item.text %>
+                </p>
+            </div>
 		</main>
 	</body>
 </html>

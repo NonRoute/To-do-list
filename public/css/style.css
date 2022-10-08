@@ -74,6 +74,11 @@ li a:hover {
     border-radius: 10px;
 }
 
+.go-back {
+    width: 80%;
+    margin: 20px auto;
+}
+
 .todo {
     background-color: #fff;
     width: 80%;
@@ -109,14 +114,14 @@ li a:hover {
     align-items: center;
 }
 
-.edit-tab > h2 {
+.edit-tab > .edit-title > h2 {
     color:#fff;
     display: inline-block;
     line-height: 50px;
     font-size: 30px;
 }
 
-.edit-tab > .edit-button > button {
+.edit-tab > .edit-button > button, .edit-tab > .edit-button > a > button, .go-back-btn {
     font-weight: 700;
     background-color: white;
     height: 30px;
@@ -125,7 +130,7 @@ li a:hover {
     border: 0;
 }
 
-.edit-tab > .edit-button > button:hover {
+.edit-tab > .edit-button > button:hover, .edit-tab > .edit-button > a > button:hover, .go-back-btn:hover {
     background-color: rgba(255, 255, 255, 0.779);
     height: 30px;
     border-radius: 5px;

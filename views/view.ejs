@@ -22,7 +22,12 @@
 			<% Object.values(todo).forEach(function(item){%>
 				<div class="todo">
 					<div class="edit-tab">
-						<h2><%= item.title %></h2>
+						<div class="edit-title">
+							<h2><%= item.title %></h2>
+						</div>
+						<div class="edit-button">
+							<a href="/<%= item._id%>"><button type="submit">View</button></a>
+						</div>
 					</div>
 					<p class="date-time"><em><%= item.datetime.replace('T', ' ')%></em></p>
 					<p>

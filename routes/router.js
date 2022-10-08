@@ -22,6 +22,13 @@ router.get("/add", (req, res) => {
 	res.render("add")
 })
 
+router.get('/:id',(req,res)=>{
+	const todo_id = req.params.id
+	Todo.findOne({_id:todo_id}).exec((err,doc)=>{
+		res.render('todo',{item:doc})
+	})
+})
+
 router.post("/insert", (req, res) => {
 	let data = new Todo({
 		title:req.body.title,
