@@ -79,7 +79,7 @@ li a:hover {
     margin: 20px auto;
 }
 
-.todo {
+.todo, .login {
     background-color: #fff;
     width: 80%;
     margin: 20px auto;
@@ -114,7 +114,27 @@ li a:hover {
     align-items: center;
 }
 
-.edit-tab > .edit-title > h2 {
+.login-btn {
+    font-weight: 700;
+    color:#222;
+    background-color: rgb(164, 241, 91);
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.login-btn:hover {
+    font-weight: 700;
+    color:#222;
+    background-color: rgb(195, 246, 147);
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.edit-tab > .edit-title > h2, .edit-tab > h2 {
     color:#fff;
     display: inline-block;
     line-height: 50px;
@@ -178,3 +198,12 @@ textarea {
     text-align: center;
 }
 
+.form-group {
+    margin: 10px 0;
+}
+
+.success {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: rgb(211, 72, 72);
+}

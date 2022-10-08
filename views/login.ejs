@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<%- include('navbar') %>
+		
+		<main>
+			<form class="login" mothod="POST" action="/signin">
+                <h1>Login</h1>
+                <div class="form-group">
+                    <label>Username</label><br>
+                    <input type="text" name="username">
+                </div>
+                <div class="form-group">
+                    <label>Password</label><br>
+                    <input type="password" name="password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="login-btn" formmethod="post">Login</button>
+                </div>
+                <p class="success"><%= success %></p>
+            </form>
+		</main>
+	</body>
+</html>

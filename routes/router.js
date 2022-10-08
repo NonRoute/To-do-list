@@ -22,6 +22,10 @@ router.get("/add", (req, res) => {
 	res.render("add")
 })
 
+router.get("/login", (req, res) => {
+	res.render("login", {success: ""})
+})
+
 router.get('/:id',(req,res)=>{
 	const todo_id = req.params.id
 	Todo.findOne({_id:todo_id}).exec((err,doc)=>{
@@ -59,5 +63,21 @@ router.post("/delete", (req, res) => {
 		if(err) console.log(err)
 		res.redirect('/edit')
 	})
+})
+
+router.post('/signin',(req,res)=>{
+	const username = req.body.username
+	const password = req.body.password
+	const timeExpire = 30000 
+
+	if (username === "admin" && password === "pass") {
+		req.session.username = username
+		req.session.password = password
+		req.session.login = true
+		req.session.cookie.maxAge = timeExpire
+		res.redirect('/edit')
+	} else {
+		res.render('login', {success: "Wrong username or password!"})
+	}
 })
 module.exports = router
