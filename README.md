@@ -19,7 +19,7 @@ Edit page for editing To-Do List or delete To-Do List<br/>
 
 ## How to run the app
 1. Download the code
-2. Install MongoDB Compass
+2. Install MongoDB Community Server & MongoDB Compass
 3. Navigate to inside the project folder on terminal
 4. Run `npm install`
 5. Run `npm start`
